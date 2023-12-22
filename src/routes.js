@@ -1,8 +1,9 @@
-import { Outlet, Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
+import { Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import Album from "./components/Album";
 import AlbumImages from "./components/AlbumImages";
 import AllImages from "./components/AllImages";
 import { ROUTES } from "./constants";
+import AlbumLayout from "./components/Album/album-layout";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -14,8 +15,8 @@ const router = createBrowserRouter(
                     crumb: () => "All albums",
                 }} 
             >
-                <Route 
-                    element={<div><Outlet /></div>}>
+                {/* <Route 
+                    element={<div><Outlet /></div>}> */}
                     <Route 
                         path={ROUTES.ALBUM_IMAGES}
                         element={<AlbumImages />}
@@ -30,7 +31,11 @@ const router = createBrowserRouter(
                             crumb: () => "All Images",
                         }} 
                     />
-                </Route>
+                {/* </Route> */}
+                <Route 
+                    index
+                    element={<AlbumLayout />}
+                />
             </Route>
             <Route 
                 path="/*" 
