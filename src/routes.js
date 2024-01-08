@@ -1,5 +1,5 @@
 import { Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
-import Album from "./components/Album";
+import ParentLayout from "./components/Album";
 import AlbumImages from "./components/AlbumImages";
 import AllImages from "./components/AllImages";
 import { ROUTES } from "./constants";
@@ -10,7 +10,7 @@ const router = createBrowserRouter(
         <>
             <Route 
                 path={ROUTES.BASE_PATH} 
-                element={<Album />}
+                element={<ParentLayout />}
                 handle={{
                     crumb: () => "All albums",
                 }} 
