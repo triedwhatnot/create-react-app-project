@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.album-container{
+  height: 500px;
+  width: 50%;
+  overflow: scroll;
+  background-color: aliceblue;
+  margin: auto;
+  padding: 20px;
+}
+
+.album-row{
+  padding-bottom: 10px;
+}
+
+.album-row-link{
+  text-decoration: none;
+  color: black;
+}

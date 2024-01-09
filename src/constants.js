@@ -1,7 +1,9 @@
+const ALBUMS_BASE_PATH = "/albums";
+
 export const ROUTES = {
-    BASE_PATH: "/",
-    ALBUM_IMAGES: "/:albumId/images",
-    ALL_IMAGES: "/all-images",
+    BASE_PATH: ALBUMS_BASE_PATH,
+    ALBUM_IMAGES: `${ALBUMS_BASE_PATH}:albumId/images`,
+    ALL_IMAGES: `${ALBUMS_BASE_PATH}all-images`,
 }
 
 export const API_URLS = {
